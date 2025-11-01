@@ -43,8 +43,8 @@ const Navbar = () => {
 
     return (
         <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-            {/* <div className="logo">Hotel Kavitha Inn</div> */}
-            <a href="#hero" className="logo">Hotel Kavitha Inn</a>
+            {/* <div className="logo">Hotel Kavita Inn</div> */}
+            <a href="#hero" className="logo">Hotel Kavita Inn</a>
             <ul ref={menuRef} className={`nav-links ${isMenuOpen ? "active" : ""}`}>
                 <li onClick={handleLinkClick}><a href="#hero">Home</a></li>
                 <li onClick={handleLinkClick}><a href="#about">About</a></li>
