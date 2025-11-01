@@ -14,6 +14,7 @@ const Hero = () => {
                     Luxury and comfort amidst Ujjain’s rich heritage and historic wonders
                 </p>
                 <div className="hero-buttons">
+                    {/* WhatsApp Inquiry */}
                     <a
                         href="https://wa.me/7247241112?text=Hello%20Hotel%20Kavitha%20Inn,%20I'm%20here%20for%20inquiry."
                         target="_blank"
@@ -23,8 +24,9 @@ const Hero = () => {
                         Inquire Now
                     </a>
 
-                    <a href="#rooms" className="btn-secondary">
-                        View Rooms
+                    {/* Call Now */}
+                    <a href="tel:+917247241112" className="btn-secondary">
+                        Call Now
                     </a>
                 </div>
             </div>
