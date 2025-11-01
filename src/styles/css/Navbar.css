@@ -1,0 +1,134 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-sizing: border-box;
+
+    /* Initial glassy background (non-scrolled) */
+    background-color: rgba(255, 255, 255, 0.1); /* subtle white overlay */
+    backdrop-filter: blur(5px); /* soft blur */
+    border-bottom: none;
+    transition: all 0.5s ease;
+}
+
+.navbar.scrolled {
+    /* Stronger glass effect on scroll */
+    background-color: rgba(255, 255, 255, 0.25); /* slightly more opaque */
+    backdrop-filter: blur(12px); /* more blur for emphasis */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+/* Golden glow on hover */
+.logo:hover {
+    color: black; /* golden accent */
+    text-shadow: 
+        0 0 5px #B6895B,
+        0 0 10px #B6895B,
+        0 0 15px #FFD580,
+        0 0 20px #FFD580;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: #1C1C1C;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    /* color: #B6895B; */
+    color: black; /* golden accent */
+    text-shadow: 
+        0 0 5px #B6895B,
+        0 0 10px #B6895B,
+        0 0 15px #FFD580,
+        0 0 20px #FFD580;
+}
+
+.cta-button {
+    background-color: #B6895B;
+    color: #F7F4EF;
+    font-weight: 600;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-menu {
+    display: none; /* hidden by default */
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Responsive for tablet/mobile */
+@media (max-width: 1024px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        padding: 20px 0;
+        gap: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .cta-button {
+        display: none;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+
+/* Smaller mobile devices */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 12px 16px;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    .mobile-menu {
+        font-size: 26px;
+    }
+}
