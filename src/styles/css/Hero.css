@@ -47,7 +47,6 @@
     font-size: 48px;
     font-weight: 700;
     color: black;
-    /* color: #173F35; */
     margin-bottom: 15px;
 }
 
@@ -56,7 +55,6 @@
     font-size: 20px;
     font-weight: 500;
     color: black;
-    /* color: #1C1C1C; */
     margin-bottom: 25px;
 }
 
@@ -67,15 +65,25 @@
     flex-wrap: wrap;
 }
 
-.btn-primary {
-    background-color: #B6895B;
-    color: #F7F4EF;
+.btn-primary,
+.btn-secondary {
+    display: flex;             /* use flexbox */
+    justify-content: center;   /* center horizontally */
+    align-items: center;       /* center vertically */
+    gap: 8px;                  /* space between icon and text */
+    line-height: 1;            /* ensures vertical centering */
     font-weight: 600;
     padding: 12px 24px;
     border-radius: 8px;
-    border: none;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-align: center;        /* center text inside */
+}
+
+.btn-primary {
+    background-color: #B6895B;
+    color: #F7F4EF;
+    border: none;
 }
 
 .btn-primary:hover {
@@ -85,12 +93,7 @@
 .btn-secondary {
     background-color: transparent;
     color: #173F35;
-    font-weight: 600;
-    padding: 12px 24px;
-    border-radius: 8px;
     border: 2px solid #173F35;
-    cursor: pointer;
-    transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
@@ -98,8 +101,45 @@
     color: #F7F4EF;
 }
 
-/* Responsive */
+/* Ensure icons scale with text */
+.btn-primary svg,
+.btn-secondary svg {
+    font-size: 1em;
+}
+
+/* Tablet: 1024px */
+@media (max-width: 1024px) {
+    .hero-overlay {
+        padding: 35px 40px;
+        max-width: 600px;
+        margin: 20px;
+    }
+
+    .hero-title {
+        font-size: 42px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        gap: 18px;
+    }
+
+    .btn-primary svg,
+    .btn-secondary svg {
+        font-size: 0.95em;
+    }
+}
+
+/* Mobile: 768px */
 @media (max-width: 768px) {
+    .hero-overlay {
+        padding: 30px 20px;
+        margin: 15px;
+    }
+
     .hero-title {
         font-size: 36px;
     }
@@ -108,13 +148,18 @@
         font-size: 16px;
     }
 
-    .hero-overlay {
-        padding: 30px 20px;
-        margin: 20px;
-    }
-
     .hero-buttons {
         flex-direction: column;
         gap: 15px;
+    }
+
+    .hero-logo {
+        max-width: 80px;
+        margin-bottom: 15px;
+    }
+
+    .btn-primary svg,
+    .btn-secondary svg {
+        font-size: 0.9em;
     }
 }

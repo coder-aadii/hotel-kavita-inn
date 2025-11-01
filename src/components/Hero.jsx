@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/css/Hero.css";
 import hotelLogo from "../assets/hotel-brand-logo.png";
+import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 
 const Hero = () => {
     return (
@@ -14,19 +15,20 @@ const Hero = () => {
                     Luxury and comfort amidst Ujjain’s rich heritage and historic wonders
                 </p>
                 <div className="hero-buttons">
-                    {/* WhatsApp Inquiry */}
                     <a
                         href="https://wa.me/7247241112?text=Hello%20Hotel%20Kavitha%20Inn,%20I'm%20here%20for%20inquiry."
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-primary"
                     >
-                        Inquire Now
+                        <FaWhatsapp /> Inquire Now
                     </a>
 
-                    {/* Call Now */}
-                    <a href="tel:+917247241112" className="btn-secondary">
-                        Call Now
+                    <a
+                        href="tel:+917247241112"
+                        className="btn-secondary"
+                    >
+                        <FaPhoneAlt /> Call Now
                     </a>
                 </div>
             </div>

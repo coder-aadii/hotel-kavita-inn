@@ -29,8 +29,10 @@ const Footer = () => {
             <a
               href="mailto:info@hotelkavithainn.com?subject=Subscribe%20to%20Newsletter"
               className="btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Subscribe via Email
+              Subscribe
             </a>
           </div>
         </div>

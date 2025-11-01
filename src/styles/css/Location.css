@@ -131,6 +131,9 @@
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
+  .location {
+    padding: 80px 30px 10px 30px;
+  }
   .map-container {
     height: 250px;
   }

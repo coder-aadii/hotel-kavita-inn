@@ -33,8 +33,8 @@ const touristPlaces = [
     { name: "Jantar Mantar (Vedh Shala)", significance: "An 18th-century observatory built by Maharaja Jai Singh II for studying astronomical phenomena and geographical coordinates.", image: jantarmantarImg },
     { name: "Bhartrihari Caves", significance: "Ancient caves believed to be the place where King Bhartrihari renounced his kingdom and performed penance.", image: bhartrihariImg },
     { name: "Ram Ghat", significance: "The most sacred bathing ghat on the Kshipra River. One of the four sites of Kumbh Mela (Simhastha) held every 12 years. Famous for its spectacular evening Aarti.", image: ramghatImg },
-    { name: "Kaliadeh Palace", significance: "A historical palace with Persian architecture, situated on an island in the Shipra River, offering scenic views.", image: kaliadehImg },
     { name: "Gomti Kund", significance: "A sacred water tank associated with Lord Krishna's time at Sandipani Ashram.", image: gomtikundImg },
+    { name: "Kaliadeh Palace", significance: "A historical palace with Persian architecture, situated on an island in the Shipra River, offering scenic views.", image: kaliadehImg }
 ];
 
 const aartis = [
@@ -88,8 +88,8 @@ const About = () => {
                                 <img src={place.image} alt={place.name} />
                             </div>
                             <div className="place-info">
-                                <h4>{place.name}</h4>
-                                <p>{place.significance}</p>
+                                <h6>{place.name}</h6>
+                                <p className="place-significance">{place.significance}</p>
                             </div>
                         </div>
                     ))}

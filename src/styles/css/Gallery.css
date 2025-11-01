@@ -1,8 +1,5 @@
-/* Gallery.css */
-
 .gallery {
     padding: 80px 60px;
-    /* background-color: #f7f4ef; */
     background-color: #FCC6BB;
     text-align: center;
 }
@@ -17,7 +14,7 @@
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* default 3 columns */
     gap: 20px;
 }
 
@@ -43,15 +40,28 @@
     filter: brightness(0.9);
 }
 
-/* Responsive */
+/* Tablet: 1024px */
 @media (max-width: 1024px) {
+    .gallery {
+        padding: 80px 30px 10px 30px;
+    }
+
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(200px, auto);
     }
 }
 
+/* Mobile: 768px */
 @media (max-width: 768px) {
+    .gallery {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
     .gallery-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(180px, auto);
+        gap: 15px;
     }
 }
