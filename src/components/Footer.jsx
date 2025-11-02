@@ -27,10 +27,8 @@ const Footer = () => {
             <h4>Subscribe</h4>
             <p>Want updates from us? Send your email via your email client:</p>
             <a
-              href="mailto:info@hotelkavithainn.com?subject=Subscribe%20to%20Newsletter"
-              className="btn-primary"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:hotelkavitainnayid@gmail.com?subject=Subscribe%20to%20Newsletter"
+              class="btn-primary"
             >
               Subscribe
             </a>

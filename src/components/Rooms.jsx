@@ -5,9 +5,9 @@ import room2 from "../assets/room2.jpg";
 import room3 from "../assets/room3.jpg";
 
 const rooms = [
-    { img: room1, name: "Double Bed", price: "₹2000/night" },
-    { img: room2, name: "Triple Bed", price: "₹3000/night" },
-    { img: room3, name: "Four Bed", price: "₹4000/night" },
+    { img: room1, name: "Double Bed", price: "₹2500/night" },
+    { img: room2, name: "Triple Bed", price: "₹3500/night" },
+    { img: room3, name: "Four Bed", price: "₹4500/night" },
 ];
 
 const Rooms = () => {
