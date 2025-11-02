@@ -1,23 +1,25 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import "../styles/css/About.css";
-import hotelImage from "../assets/hotel_about.jpg";
+import hotelImage from "../assets/webp_images/hotel_about.webp";
 
 // Images for places (replace with actual images)
-import mahakaleshwarImg from "../assets/mahakaleshwar.jpg";
-import mahakalokImg from "../assets/mahakallok.jpg";
-import kalbhairavImg from "../assets/kaalbhairav.jpg";
-import harisiddhiImg from "../assets/harisiddhi.jpg";
-import chintamanImg from "../assets/chintaman.jpg";
-import badeganeshImg from "../assets/badeganesh.jpg";
-import mangalnathImg from "../assets/mangalnath.jpg";
-import dwarkadhishImg from "../assets/dwarkadhish.jpg";
-import gadkalikaImg from "../assets/gadkalika.jpg";
-import sandipaniImg from "../assets/sandipani.jpg";
-import ramghatImg from "../assets/ramghat.jpg";
-import jantarmantarImg from "../assets/jantarmantar.jpg";
-import bhartrihariImg from "../assets/bhartrihari.jpg";
-import kaliadehImg from "../assets/kaliadeh.jpg";
-import gomtikundImg from "../assets/gomtikund.jpg";
+import mahakaleshwarImg from "../assets/webp_images/mahakaleshwar.webp";
+import mahakalokImg from "../assets/webp_images/mahakallok.webp";
+import kalbhairavImg from "../assets/webp_images/kaalbhairav.webp";
+import harisiddhiImg from "../assets/webp_images/harisiddhi.webp";
+import chintamanImg from "../assets/webp_images/chintaman.webp";
+import badeganeshImg from "../assets/webp_images/badeganesh.webp";
+import mangalnathImg from "../assets/webp_images/mangalnath.webp";
+import dwarkadhishImg from "../assets/webp_images/dwarkadhish.webp";
+import gadkalikaImg from "../assets/webp_images/gadkalika.webp";
+import sandipaniImg from "../assets/webp_images/sandipani.webp";
+import ramghatImg from "../assets/webp_images/ramghat.webp";
+import jantarmantarImg from "../assets/webp_images/jantarmantar.webp";
+import bhartrihariImg from "../assets/webp_images/bhartrihari.webp";
+import kaliadehImg from "../assets/webp_images/kaliadeh.webp";
+import gomtikundImg from "../assets/webp_images/gomtikund.webp";
 
 const touristPlaces = [
     { name: "Shri Mahakaleshwar Temple", significance: "One of the 12 Jyotirlingas of Lord Shiva and the only one that is South-facing (Dakshinamukhi). Famous for the unique Bhasma Aarti.", image: mahakaleshwarImg },
@@ -53,7 +55,11 @@ const About = () => {
             {/* Top section: Image left, About content right */}
             <div className="about-top">
                 <div className="about-image">
-                    <img src={hotelImage} alt="Hotel Kavita Inn" />
+                    <LazyLoadImage
+                        alt="Hotel Kavita Inn"
+                        src={hotelImage}
+                        effect="blur"
+                    />
                 </div>
                 <div className="about-content">
                     <h2>About Hotel Kavita Inn</h2>
@@ -85,7 +91,11 @@ const About = () => {
                     {touristPlaces.map((place, index) => (
                         <div className="place-card" key={index}>
                             <div className="place-image">
-                                <img src={place.image} alt={place.name} />
+                                <LazyLoadImage
+                                    alt={place.name}
+                                    src={place.image}
+                                    effect="blur"
+                                />
                             </div>
                             <div className="place-info">
                                 <h6>{place.name}</h6>

@@ -1,6 +1,8 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import "../styles/css/Hero.css";
-import hotelLogo from "../assets/hotel-brand-logo.png";
+import hotelLogo from "../assets/webp_images/hotel-brand-logo.webp";
 import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 
 const Hero = () => {
@@ -8,7 +10,12 @@ const Hero = () => {
         <section className="hero" id="hero">
             <div className="hero-overlay">
                 {/* Hotel Logo */}
-                <img src={hotelLogo} alt="Hotel Kavita Inn Logo" className="hero-logo" />
+                <LazyLoadImage
+                    alt="Hotel Kavita Inn Logo"
+                    src={hotelLogo}
+                    className="hero-logo"
+                    effect="blur"
+                />
 
                 <h1 className="hero-title">Welcome to Hotel Kavita Inn</h1>
                 <p className="hero-subtitle">

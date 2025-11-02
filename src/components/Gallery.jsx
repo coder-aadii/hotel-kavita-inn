@@ -1,11 +1,13 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import "../styles/css/Gallery.css";
-import gallery1 from "../assets/gallery1.jpg";
-import gallery2 from "../assets/gallery2.jpg";
-import gallery3 from "../assets/gallery3.jpg";
-import gallery4 from "../assets/gallery4.jpg";
-import gallery5 from "../assets/gallery5.jpg";
-import gallery6 from "../assets/gallery6.jpg";
+import gallery1 from "../assets/webp_images/gallery1.webp";
+import gallery2 from "../assets/webp_images/gallery2.webp";
+import gallery3 from "../assets/webp_images/gallery3.webp";
+import gallery4 from "../assets/webp_images/gallery4.webp";
+import gallery5 from "../assets/webp_images/gallery5.webp";
+import gallery6 from "../assets/webp_images/gallery6.webp";
 
 const images = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6];
 
@@ -16,7 +18,11 @@ const Gallery = () => {
       <div className="gallery-grid">
         {images.map((img, index) => (
           <div className="gallery-card" key={index}>
-            <img src={img} alt={`Gallery ${index + 1}`} />
+            <LazyLoadImage
+              alt={`Gallery ${index + 1}`}
+              src={img}
+              effect="blur"
+            />
           </div>
         ))}
       </div>

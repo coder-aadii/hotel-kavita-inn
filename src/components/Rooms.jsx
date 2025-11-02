@@ -1,8 +1,10 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import "../styles/css/Rooms.css";
-import room1 from "../assets/room1.jpg";
-import room2 from "../assets/room2.jpg";
-import room3 from "../assets/room3.jpg";
+import room1 from "../assets/webp_images/room1.webp";
+import room2 from "../assets/webp_images/room2.webp";
+import room3 from "../assets/webp_images/room3.webp";
 
 const rooms = [
     { img: room1, name: "Double Bed", price: "₹2500/night" },
@@ -17,7 +19,11 @@ const Rooms = () => {
             <div className="rooms-grid">
                 {rooms.map((room, index) => (
                     <div className="room-card" key={index}>
-                        <img src={room.img} alt={room.name} />
+                        <LazyLoadImage
+                            alt={room.name}
+                            src={room.img}
+                            effect="blur"
+                        />
                         <div className="room-info">
                             <h3>{room.name}</h3>
                             <p>{room.price}</p>

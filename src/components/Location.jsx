@@ -1,5 +1,8 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import "../styles/css/Location.css";
+import locationMap from "../assets/webp_images/location-map.webp";
 
 const Location = () => {
     return (
@@ -7,7 +10,11 @@ const Location = () => {
             <h2 className="section-title">Our Location</h2>
             <div className="location-container">
                 <div className="map">
-                    <img src={require("../assets/location-map.jpg")} alt="Hotel Kavita Inn proximity map" />
+                    <LazyLoadImage
+                        alt="Hotel Kavita Inn proximity map"
+                        src={locationMap}
+                        effect="blur"
+                    />
                 </div>
                 <div className="location-info">
                     <h3 style={{ textDecoration: "underline" }}>Hotel Kavita Inn</h3>
